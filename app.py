@@ -34,6 +34,13 @@ def generate_random_string():
 
 @app.route('/', methods=['POST'])
 def generate():
+    try:
+        os.mkdir('files')
+    except:
+        print('hehe')
+        pass
+
+
     file_name = str(uuid4())
     limit = 2 * 1024 * 1024 # 2mb
     file_path = 'files/{name}.txt'.format(name=file_name)
