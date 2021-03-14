@@ -1,4 +1,5 @@
 from flask import Flask, send_file
+from flask_cors import CORS
 import random
 from uuid import uuid4
 import os
@@ -6,6 +7,7 @@ import re
 
 
 app = Flask(__name__)
+CORS(app)
 
 
 #constants
@@ -37,7 +39,6 @@ def generate():
     try:
         os.mkdir('files')
     except:
-        print('hehe')
         pass
 
 
