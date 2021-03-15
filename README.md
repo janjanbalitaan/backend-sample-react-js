@@ -18,6 +18,9 @@ A simple service that runs in Python with Flask framework.
 
 
 ## API Enpoints
+
+The API Endpoints are published in [Postman Documenter](https://documenter.getpostman.com/view/11811884/Tz5qbxZm)
+
 - **Generate Data**
 ```
 POST /
