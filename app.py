@@ -18,13 +18,21 @@ base_url = 'http://localhost:5000'
 separator = ' ,'
 real_number_pattern = re.compile(r"([0-9]+(?:\.[0-9]+)?)")
 
+def generate_random_string(li = []):
+    bias = 0
+    if bias in li:
+        idx = random.randint(1, 3)
+    else:
+        idx = bias
 
-def generate_random_string():
-    idx = random.randint(0, 3)
+    li.append(idx)
+    if len(li) > 2:
+        li.clear()
+
     if idx == 0:
-        d = ''.join(random.choice(alphabet_list) for _ in range(0, 20))
-    if idx == 1:
         d = random.randint(0, 999999)
+    if idx == 1:
+        d = ''.join(random.choice(alphabet_list) for _ in range(0, 20))
     if idx == 2:
         d = random.uniform(0, 999999)
     if idx == 3:
